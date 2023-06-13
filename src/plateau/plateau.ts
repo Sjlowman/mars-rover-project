@@ -1,3 +1,3 @@
-export function allocatePlateauSize(x: number, y: number): number {
-  return x + y;
+export function allocatePlateauSize(x: number, y: number): string {
+  return "Plateau max boundary set";
 }

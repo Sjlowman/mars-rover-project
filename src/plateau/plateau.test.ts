@@ -1,9 +1,6 @@
-import { allocatePlateauSize } from "../plateau/calc";
-describe("test add function", () => {
-  it("should return 15 for add(10,5)", () => {
-    expect(add(11, 5)).toBe(16);
-  });
-  it("should return 5 for add(2,3)", () => {
-    expect(add(2, 3)).toBe(5);
+import { allocatePlateauSize } from "../plateau/plateau";
+describe("test setting the plateau size", () => {
+  it("Should  return msg to say it's been set if it receives two positive integers", () => {
+    expect(allocatePlateauSize(10, 7)).toBe("Plateau max boundary set");
   });
 });
