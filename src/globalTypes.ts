@@ -17,7 +17,11 @@ declare global {
    */
 
   type PositiveNumber = number & { __type: "PositiveNumber" };
-  type Grid = { x: number; y: number };
+  //type Grid = { x: number; y: number };
+  type Grid = [x: number, y: number];
+  type COMPASS_DIRECTIONS = ["N", "E", "S", "W"];
+  type MOVEMENT_DIRECTIONS = ["W", "A", "S", "D"];
+  type ALLOWABLE_FILE_INSTRUCTIONS = ["M", "L", "R"];
 }
 /*
   ~ If your module exports types or values, write them as usual

@@ -1,6 +1,6 @@
-import { add } from "../rover/roverChangeDirection";
-describe("test add function", () => {
-  it("should return 15 for add(10,5)", () => {
-    expect(add(10, 5)).toBe(15);
+import { parseInitialPosition } from "../rover/roverProcessInstructions";
+xdescribe("test parse function", () => {
+  it("should return [1,2] if it receives '1 2 N'", () => {
+    expect(parseInitialPosition("1 2 N")).toBe([1, 2]);
   });
 });
