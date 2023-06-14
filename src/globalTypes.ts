@@ -10,12 +10,14 @@
  *~ need to combine the patterns here with those in the module-class or module-function
  *~ template files
  */
+export {};
 declare global {
   /*~ Here, declare things that go in the global namespace, or augment
    *~ existing declarations in the global namespace
    */
 
   type PositiveNumber = number & { __type: "PositiveNumber" };
+  type Grid = { x: number; y: number };
 }
 /*
   ~ If your module exports types or values, write them as usual

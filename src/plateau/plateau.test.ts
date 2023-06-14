@@ -1,5 +1,5 @@
 import { allocatePlateauSize } from "../plateau/plateau";
-type PositiveNumber = number & { __type: "PositiveNumber" };
+//type PositiveNumber = number & { __type: "PositiveNumber" };
 function assertsPositiveNumber(value: number): asserts value is PositiveNumber {
   if (value < 0) throw new Error("Value must be a positive number");
 }
