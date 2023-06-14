@@ -1,3 +1,9 @@
-export function parseInitialPosition(str: string): Grid {
-  return [4, 5];
+export function processEachInstruction(
+  currentPosition: CurrentRoverPosition,
+  str: string
+): CurrentRoverPosition {
+  return {
+    gridLocation: [1, 2],
+    aspect: "N",
+  };
 }

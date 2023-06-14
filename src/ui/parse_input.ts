@@ -26,8 +26,5 @@ export function parseRoverInitialAspectInput(
   const roverInitialAspect = input.substring(4, 5);
   const aspectMap = ["N", "E", "S", "W"];
 
-  // now we verify it's valid
-
-  // we know the input is valid so we can return a Hole
   return COMPASS_DIRECTIONS[aspectMap.indexOf(roverInitialAspect)];
 }

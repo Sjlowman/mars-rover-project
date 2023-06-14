@@ -1,6 +1,17 @@
-import { parseInitialPosition } from "../rover/roverProcessInstructions";
-xdescribe("test parse function", () => {
+import { processEachInstruction } from "../rover/roverProcessInstructions";
+describe("test parse function", () => {
   it("should return [1,2] if it receives '1 2 N'", () => {
-    expect(parseInitialPosition("1 2 N")).toBe([1, 2]);
+    expect(
+      processEachInstruction(
+        {
+          gridLocation: [1, 2],
+          aspect: "N",
+        },
+        "M"
+      )
+    ).toStrictEqual({
+      gridLocation: [1, 2],
+      aspect: "N",
+    });
   });
 });
