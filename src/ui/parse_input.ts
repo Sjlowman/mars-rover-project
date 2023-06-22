@@ -12,7 +12,6 @@ export function parseRoverInitialPositionInput(
   const xPosition: number = parseInt(input.charAt(0));
   const yPosition: number = parseInt(input.charAt(2));
 
-  // now we verify it's valid
   if (isNaN(xPosition) || isNaN(yPosition)) {
     return undefined;
   }
@@ -28,13 +27,6 @@ export function parseRoverInitialPositionInput(
     aspectToValidate === "S" ||
     aspectToValidate === "W"
   ) {
-    //const roverInitialAspect =
-    // ;
-    // we know the input is valid so we can return a Grid position
-    //const CurrentRoverPosition.x = xPosition;
-    //roverStartPosition.splice(0, 1, xPosition);
-    //roverStartPosition.splice(1, 1, yPosition);
-
     return { x: xPosition, y: yPosition, aspect: aspectToValidate };
   } else return undefined; // roverStartPosition;
 }

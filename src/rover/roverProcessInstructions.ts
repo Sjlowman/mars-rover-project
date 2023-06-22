@@ -2,29 +2,16 @@ export function processEachInstruction(
   currentPosition: CurrentRoverPosition,
   instruction: possibleDirections
 ): CurrentRoverPosition {
-  //const currentDirection = currentPosition.aspect;
-  //const newRoverPosition = Object.create(currentPosition);
-
   if (instruction === "M") {
     return findNextLocation(currentPosition);
   } else {
-    //if (instruction === "L" || instruction === "R") {
     return findNextDirection(currentPosition, instruction);
-    /*newRoverPosition["aspect"] = findNextDirection(
-      currentDirection,
-      instruction
-    ); */
   }
-
-  //newRoverPosition["gridLocation"] = nextPosition;
-  //newRoverPosition["aspect"] = nextDirection;
-  //return newRoverPosition;
 }
 
 function findNextLocation(
   currentPosition: CurrentRoverPosition
 ): CurrentRoverPosition {
-  //const updateNewLocation:CurrentRoverPosition  =
   currentPosition.aspect === "N"
     ? (currentPosition.y += 1)
     : currentPosition.aspect === "E"
