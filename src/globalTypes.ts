@@ -11,30 +11,41 @@
  *~ template files
  */
 export {};
-//export const COMPASS_DIRECTIONS = ["N", "E", "S", "W"] as const;
-//export type CompassDirection = (typeof COMPASS_DIRECTIONS)[number];
+
 declare global {
   /*~ Here, declare things that go in the global namespace, or augment
    *~ existing declarations in the global namespace
    */
 
   type PositiveNumber = number & { __type: "PositiveNumber" };
-  //type Grid = { x: number; y: number };
-  type Grid = [x: number, y: number];
+
+  type Grid = { x: number; y: number };
 
   type COMPASS_DIRECTIONS = ["N", "E", "S", "W"];
+  //type CompassDirection = (typeof COMPASS_DIRECTIONS)[number];
   type NORTH = "N";
   type EAST = "E";
   type SOUTH = "S";
   type WEST = "W";
   type CompassDirections = NORTH | SOUTH | EAST | WEST;
-  //type CompassDirection = (typeof COMPASS_DIRECTIONS)[number];
+  /*  Need to come back and implement this
   type CurrentRoverPosition = {
-    gridLocation: Grid;
+    x: number;
+    y: number;
     aspect: CompassDirections;
+  };*/
+
+  type CurrentRoverPosition = {
+    x: number;
+    y: number;
+    aspect: string;
   };
   type MOVEMENT_DIRECTIONS = ["W", "A", "S", "D"];
-  type ALLOWABLE_FILE_INSTRUCTIONS = ["M", "L", "R"];
+  //  type ALLOWABLE_FILE_INSTRUCTIONS = ["M", "L", "R"];
+  type MOVE = "M";
+  type LEFT = "L";
+  type RIGHT = "R";
+  type possibleDirections = MOVE | LEFT | RIGHT;
 }
 /*
   ~ If your module exports types or values, write them as usual
